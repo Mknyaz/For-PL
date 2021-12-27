@@ -2,16 +2,20 @@
 #include <vector>
 #include <fstream>
 #include <cmath>
+#include <string>
 using namespace std;
 
 int main()
 {
+    string file;
+    cout << "Enter name of the file: ";
+    cin >> file;
     vector <int> nums;
     int value;
     float sum = 0;
     int count = 0;
     ifstream fin;
-    fin.open("file.txt");
+    fin.open(file);
     while (!fin.eof()) {
         fin >> value;
         nums.push_back(value);

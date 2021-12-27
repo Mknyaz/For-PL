@@ -1,12 +1,19 @@
 #include <iostream>
 #include <cmath>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main()
 {
+	string name_file1,name_file2;
+	cout << "Enter name of the first file: ";
+	cin >> name_file1;
+	cout << endl;
+	cout << "Enter name of the second file: ";
+	cin >> name_file2;
 	ifstream fin;
-	fin.open("file1.txt");
+	fin.open(name_file1);
 	float r, x, y;    // радиус и координаты центра окружности
 	float kx, ky;     // координаты точек
 	float sum;
@@ -17,7 +24,7 @@ int main()
 	}
 	fin.close();
 
-	fin.open("file2.txt");
+	fin.open(name_file2);
 	while (!fin.eof()) {
 		fin >> kx;
 		fin >> ky;
